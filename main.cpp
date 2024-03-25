@@ -7,10 +7,19 @@ using std::string;
 
 float progressaoAritmetica(float);
 int iNumeroDeDigitos(int);
+void abs(float&);
 
 int main()
 {
     return 0;
+}
+
+void abs(float& fValor)
+{
+    if (fValor < 0)
+    {
+        fValor = -fValor;
+    }
 }
 
 float progressaoAritmetica(float fRazao, float fInicial, int iTermo)
