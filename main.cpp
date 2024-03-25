@@ -8,6 +8,7 @@ using std::string;
 float progressaoAritmetica(float);
 int iNumeroDeDigitos(int);
 void abs(float&);
+int iFibonacciN(int);
 
 int main()
 {
@@ -20,6 +21,22 @@ void abs(float& fValor)
     {
         fValor = -fValor;
     }
+}
+
+int iFibonacciN(int N)
+{
+    int iF1 = 1;
+    int iF2 = 1;
+    int iContador = 0;
+    while (iContador < (N-2))
+    {
+        int auxiliar = iF1;
+        iF1 = iF2;
+        iF2 = iF2 + auxiliar;
+        iContador += 1;
+    }
+
+    return iF2;
 }
 
 float progressaoAritmetica(float fRazao, float fInicial, int iTermo)
