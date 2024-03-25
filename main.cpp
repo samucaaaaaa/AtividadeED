@@ -9,6 +9,7 @@ float progressaoAritmetica(float);
 int iNumeroDeDigitos(int);
 void abs(float&);
 int iFibonacciN(int);
+int iFatorial(unsigned int);
 
 int main()
 {
@@ -55,3 +56,15 @@ int iNumeroDeDigitos(int iValor)
         return 1;
    }
 }  
+
+int iFatorial(unsigned int uiValor)
+{
+    if (uiValor == 0 || uiValor == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return uiValor * iFatorial(uiValor - 1);
+    }
+}
